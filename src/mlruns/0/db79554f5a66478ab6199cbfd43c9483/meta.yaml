@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/db79554f5a66478ab6199cbfd43c9483/artifacts
+end_time: 1698381883488
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: db79554f5a66478ab6199cbfd43c9483
+run_name: nebulous-swan-91
+run_uuid: db79554f5a66478ab6199cbfd43c9483
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698381840431
+status: 4
+tags: []
+user_id: Honey
