@@ -1,2 +1,4 @@
 venv/
-samples/
+.git
+.dvc
+__pycache__

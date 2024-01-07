@@ -4,15 +4,14 @@ FROM python:3.8
 WORKDIR /app
 
 # Copy the project files into the container
-COPY . /src/
-COPY . data/spam.csv
+COPY . /app
 
 
 # Install Python dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 
 # Specify the command to run when the container starts
 CMD ["python", "src/main.py"]
 
-EXPOSE 8000
+EXPOSE 80
