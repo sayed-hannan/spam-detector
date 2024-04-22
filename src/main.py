@@ -1,12 +1,20 @@
+import os
 from data_ingestion import DataIngestion
 from preprocess import DataPreprocessing
 from split import DataSplitting
 from train import ModelTrainer
 from evaluate import ModelEvaluator
 
+# Get the absolute path of the script directory
+# script_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+print(f"Script directory: {script_dir}")
+data_file_path = os.path.join(script_dir, '../data/spam.csv')
+print(f"Data file path: {data_file_path}")
+
 # Data Ingestion
-data_file = "../data/spam.csv"
-data_ingestion = DataIngestion(data_file)
+# data_file = "../data/spam.csv"
+data_ingestion = DataIngestion(data_file_path)
 df = data_ingestion.ingest_data()
 
 # Data Preprocessing
