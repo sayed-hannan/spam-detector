@@ -3,8 +3,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
 from typing import Union
 import pandas as pd
-
-
+import joblib  # Added for saving the model
 
 
 class ModelTrainer:
@@ -31,10 +30,20 @@ class ModelTrainer:
             
             self.pipeline.fit(self.X_train['Message'], self.y_train)
             
-        
+            # Save the trained model
+            self.save_model()  # New method call to save the trained model
+            
+            print("Trained model saved successfully")
             
         except Exception as e:
             raise ValueError(f"Error during model training: {str(e)}")
+
+    def save_model(self) -> None:  # New method for saving the trained model
+        try:
+            joblib.dump(self.pipeline, "spam_model.pkl")
+        except Exception as e:
+            raise ValueError(f"Error saving model: {str(e)}")
+
 
 if __name__ == "__main__":
     # Load your data and create the ModelTrainer instance
