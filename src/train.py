@@ -40,7 +40,7 @@ class ModelTrainer:
 
     def save_model(self) -> None:  # New method for saving the trained model
         try:
-            joblib.dump(self.pipeline, "spam_model.pkl")
+            joblib.dump(self.pipeline, "../models")
         except Exception as e:
             raise ValueError(f"Error saving model: {str(e)}")
 

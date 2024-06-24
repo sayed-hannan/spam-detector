@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spam-detector-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spam-detector
+  template:
+    metadata:
+      labels:
+        app: spam-detector
+    spec:
+      containers:
+      - name: spam-detector
+        image: sayedhanan/spam-detector:v1.0  # Update with your image
+        ports:
+        - containerPort: 80  # Should match the EXPOSED port in Dockerfile
