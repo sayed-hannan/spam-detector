@@ -12,10 +12,10 @@ Clone the repository:
 
 ``` pip install -r requirements.txt ```
 
-** For opening a app in local browser **
+**For opening a app in local browser**
 ``` streamlit run app.py ```
 
-** You can also try running **
+**You can also try running**
 ``` python src/main.py ```
 
 
