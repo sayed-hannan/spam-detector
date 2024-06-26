@@ -6,7 +6,19 @@ Spam Detector is a machine learning project aimed at classifying emails into spa
 
 Clone the repository:
 
-git clone https://github.com/sayed-hannna/spam-detector.git
+``` git clone https://github.com/sayed-hannna/spam-detector.git ```
+
+``` cd spam detector ```
+
+``` pip install -r requirements.txt ```
+
+** For opening a app in local browser **
+``` streamlit run app.py ```
+
+** You can also try running **
+``` python src/main.py ```
+
+
 
 
 Install the required dependencies using pip:
